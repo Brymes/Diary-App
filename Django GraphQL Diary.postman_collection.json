@@ -1,0 +1,636 @@
+{
+	"info": {
+		"_postman_id": "7120ff71-7aad-4b18-bac8-7b20db75c60e",
+		"name": "Django GraphQL Diary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  createUser(password:\"brymesxo\", email:\"dev.brymes@gmail.com\", firstName:\"Brymes\", username:\"brymesxo\") {\r\n    user {\r\n      id\r\n      firstName\r\n      username\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  createUser(password:\"brymesxo\", email:\"dev.brymes@gmail.com\", firstName:\"Brymes\", username:\"brymesxo\") {\r\n    user {\r\n      id\r\n      firstName\r\n      username\r\n    }\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 18:34:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=I8PoDhfenVg2VM9W9haFJJ1vPaJhuokcxJ1vKW8qUtWPuz21NkCSHnNBkmMxPDU6; expires=Tue, 03 May 2022 18:34:02 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"createUser\": {\n            \"user\": {\n                \"id\": \"7\",\n                \"firstName\": \"Brymes\",\n                \"username\": \"brymesxo\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation { \r\n    tokenAuth(username:\"brymesxo\", password:\"brymesxo\") {   \r\n        token \r\n        payload\r\n        refreshToken\r\n        refreshExpiresIn \r\n    } \r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation { \r\n    tokenAuth(username:\"brymesxo\", password:\"brymesxo\") {   \r\n        token \r\n        payload\r\n        refreshToken\r\n        refreshExpiresIn \r\n    } \r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 00:27:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "358"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=I8PoDhfenVg2VM9W9haFJJ1vPaJhuokcxJ1vKW8qUtWPuz21NkCSHnNBkmMxPDU6; expires=Wed, 04 May 2022 00:27:18 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"tokenAuth\": {\n            \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImJyeW1lc3hvIiwiZXhwIjoxNjIwMTc4MDM1LCJvcmlnSWF0IjoxNjIwMTc0NDM1fQ.X_W6Hr9SkXODtgG217G8Xe1JnuuMAPQ53GDTi3xiVOU\",\n            \"payload\": {\n                \"username\": \"brymesxo\",\n                \"exp\": 1620178035,\n                \"origIat\": 1620174435\n            },\n            \"refreshToken\": \"677bcf1c24d17c3dfd69021b96b6cc393530649c\",\n            \"refreshExpiresIn\": 1620779235\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Refresh",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation { \r\n    refreshToken(refreshToken: \"677bcf1c24d17c3dfd69021b96b6cc393530649c\") { \r\n        token \r\n        payload\r\n        refreshToken \r\n        refreshExpiresIn\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Refresh",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation { \r\n    refreshToken(refreshToken: \"677bcf1c24d17c3dfd69021b96b6cc393530649c\") { \r\n        token \r\n        payload\r\n        refreshToken \r\n        refreshExpiresIn\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 01:29:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "361"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=I8PoDhfenVg2VM9W9haFJJ1vPaJhuokcxJ1vKW8qUtWPuz21NkCSHnNBkmMxPDU6; expires=Wed, 04 May 2022 01:29:17 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"refreshToken\": {\n            \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImJyeW1lc3hvIiwiZXhwIjoxNjIwMTgxNzU3LCJvcmlnSWF0IjoxNjIwMTc4MTU3fQ.AwuYjyA9MDVxQ5VQKO-TD-1x57Sc3OgRgGllJq900y0\",\n            \"payload\": {\n                \"username\": \"brymesxo\",\n                \"exp\": 1620181757,\n                \"origIat\": 1620178157\n            },\n            \"refreshToken\": \"22fe17b57172121d0bc8d69aa102341eacdd7c38\",\n            \"refreshExpiresIn\": 1620782957\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Entry",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImJyeW1lc3hvIiwiZXhwIjoxNjIwMTgyMjg3LCJvcmlnSWF0IjoxNjIwMTc4Njg3fQ.r78OfDqPVKPP7V2A-azSCt0g7kkV49YJooB4AcmQLAE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  createEntry(entryTitle:\"Test Entry\", entryBody:\"This is dummy Entry Text\"){\r\n      diaryEntry {\r\n            entryId\r\n            title \r\n      }   \r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Entry",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  createEntry(entryTitle:\"Test Entry\", entryBody:\"This is dummy Entry Text\"){\r\n      diaryEntry {\r\n            entryId\r\n            title \r\n      }   \r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 01:54:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=I8PoDhfenVg2VM9W9haFJJ1vPaJhuokcxJ1vKW8qUtWPuz21NkCSHnNBkmMxPDU6; expires=Wed, 04 May 2022 01:54:44 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"createEntry\": {\n            \"diaryEntry\": {\n                \"entryId\": \"566a10e6-f38e-414a-8b80-71d0017d0fd9\",\n                \"title\": \"Test Entry\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Mutate Entry",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImJyeW1lc3hvIiwiZXhwIjoxNjIwMTgyMjg3LCJvcmlnSWF0IjoxNjIwMTc4Njg3fQ.r78OfDqPVKPP7V2A-azSCt0g7kkV49YJooB4AcmQLAE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  updateEntry(\r\n      entryId:\"566a10e6-f38e-414a-8b80-71d0017d0fd9\", entryBody:\"This is Changed dummy Entry Text\", changedEntryTitle:\"Changed Test Entry\"\r\n  ){\r\n      diaryEntry {\r\n            entryId\r\n            title \r\n      }   \r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Mutate Entry",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  updateEntry(\r\n      entryId:\"566a10e6-f38e-414a-8b80-71d0017d0fd9\", entryBody:\"This is Changed dummy Entry Text\", changedEntryTitle:\"Changed Test Entry\"\r\n  ){\r\n      diaryEntry {\r\n            entryId\r\n            title \r\n      }   \r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 01:55:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "119"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=I8PoDhfenVg2VM9W9haFJJ1vPaJhuokcxJ1vKW8qUtWPuz21NkCSHnNBkmMxPDU6; expires=Wed, 04 May 2022 01:55:25 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"updateEntry\": {\n            \"diaryEntry\": {\n                \"entryId\": \"566a10e6-f38e-414a-8b80-71d0017d0fd9\",\n                \"title\": \"Changed Test Entry\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Entry",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImJyeW1lc3hvIiwiZXhwIjoxNjIwMTgyMjg3LCJvcmlnSWF0IjoxNjIwMTc4Njg3fQ.r78OfDqPVKPP7V2A-azSCt0g7kkV49YJooB4AcmQLAE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n    deleteEntry(entryId:\"c971d83b-ee7d-4e7a-8d7e-9b2523e10ea7\"){\r\n        diaryEntry{\r\n            title\r\n        }\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Entry",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n    deleteEntry(entryId:\"c971d83b-ee7d-4e7a-8d7e-9b2523e10ea7\"){\r\n        diaryEntry{\r\n            title\r\n        }\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/graphql/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 02:22:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie, Origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=I8PoDhfenVg2VM9W9haFJJ1vPaJhuokcxJ1vKW8qUtWPuz21NkCSHnNBkmMxPDU6; expires=Wed, 04 May 2022 02:22:10 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"deleteEntry\": {\n            \"diaryEntry\": {\n                \"title\": \"Test Entry\"\n            }\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
